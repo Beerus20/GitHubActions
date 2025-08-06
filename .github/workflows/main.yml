@@ -1,0 +1,18 @@
+name: GitHub Actions Demo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - run: echo "💡 Le référentiel ${{ github.repository }} a été cloné dans le runner."
+      - run: echo "🖥️ Le workflow est maintenant prêt à tester votre code sur le runner."
+      - name : Lister les fichiers dans le référentiel
+        run : |
+          ls ${{ github.espace de travail}}
+      - run : echo "🍏 Le statut de ce travail est ${{ job.status }}."
